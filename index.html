@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Music App">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Himanshu - himanshu212223@gmail.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongaku - Get the latest songs.</title>
+    <link rel="icon" type="image/x-icon" href="../Resources/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <aside class="left">
+
+            <div class="logo">
+                <h4 class="logo-text">Ongaku</h4>
+                <img src="./Resources/icons/close.svg" class="close" alt="" srcset="">
+            </div>
+
+            <div class="audioList">
+                <ul id="albums">
+                    <!-- <li>Play List 1</li>
+                    <li>Play List 2</li>
+                    <li>Play List 3</li>
+                    <li>Play List 4</li>
+                    <li>Play List 5</li> -->
+                </ul>
+            </div>
+        </aside>
+
+        <main class="right">
+
+            <nav class="right-navbar">
+
+                <img src="./Resources/icons/hamburger.svg" class="hamburger" alt="hamburger" srcset="">
+
+                <div class="searchFields">
+                    <input class="search-input" type="text" name="search" id="search" placeholder="Search for a Song">
+                    <img class="search-icon" src="./Resources/icons/search.svg" alt="search icon" srcset="">
+                </div>
+
+                <div class="socials">
+                    <div class="socials-tile">
+                        <img width="30" src="./Resources/icons/insta.svg" alt="" srcset="">
+                    </div>
+                    <div class="socials-tile">
+                        <img width="30" src="./Resources/icons/github.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </nav>
+
+            <h4 class="right-heading">Popular Songs</h4>
+
+            <div class="popular-song-list">
+                <!-- <div class="tile">
+                    <img width="80" class="playlist-logo" src="./Resources/icons/music.svg" alt="playlist logo"
+                        srcset="">
+                    <p class="tile-song">Song1</p>
+                </div>
+
+                <div class="tile">
+                    <img width="80" class="playlist-logo" src="./Resources/icons/music.svg" alt="playlist logo"
+                        srcset="">
+                    <p class="tile-song">Song2</p>
+                </div> -->
+
+            </div>
+        </main>
+    </div>
+
+    <div class="playbar">
+        <div class="song-details">&nbsp;</div>
+
+        <div class="pause-play-button">
+            <img src="./Resources/icons/previous.svg" alt="previous button" class="previousButton music-button"
+                srcset="">
+            <img src="./Resources/icons/play.svg" alt="play button" class="playButton music-button" id="playButton">
+            <img src="./Resources/icons/next.svg" alt="next button" class="nextButton music-button" srcset="">
+        </div>
+        <div class="seakbar">
+            <div class="seakbar-items">
+                <div class="bar"></div>
+                <div class="seakbar-circle"></div>
+            </div>
+            <div class="duration">
+                <p id="currentTime">--:--</p>
+                <p id="songDuration">--:--</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
