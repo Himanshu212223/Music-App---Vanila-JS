@@ -6,15 +6,15 @@ let audio = new Audio();
 let isAudioPlaying = false;
 
 
-//  to run locally, replace https://himanshu212223.github.io/Music-App---Vanila-JS/    with    http://127.0.0.1:5500   in this file.
+//  to run locally, replace Music App\Resources\Songs   with    http://127.0.0.1:5500/   in this file.
 
 
 
 //  Function to Fetch Albums
 let fetchAlbum = async () => {
-    let fetchFolder = await fetch(`https://himanshu212223.github.io/Music-App---Vanila-JS//Resources/Songs/`);
+    let fetchFolder = await fetch(`./Resources/Songs/`);
     let responseFolder = await fetchFolder.text();
-    // console.log(responseFolder);
+    console.log(responseFolder);
 
     let div = document.createElement('ul');
     div.innerHTML = responseFolder;
@@ -86,7 +86,7 @@ let setDisplayTime = () => {
 
 let playSong = async (song) => {
     let songWillPlay = new Promise((resolve, reject)=>{
-        audio.src = `https://himanshu212223.github.io/Music-App---Vanila-JS//Resources/Songs/${folder}/${song}.mp3`;
+        audio.src = `https://himanshu212223.github.io/Music-App---Vanila-JS/Resources/Songs/${folder}/${song}.mp3`;
         resolve(audio)
     });
 
@@ -110,7 +110,7 @@ let continueSong = () => {
     }
     else {
         song = songList[0];
-        audio.src = `https://himanshu212223.github.io/Music-App---Vanila-JS//Resources/Songs/${folder}/${song}.mp3`;
+        audio.src = `https://himanshu212223.github.io/Music-App---Vanila-JS/Resources/Songs/${folder}/${song}.mp3`;
         audio.play();
         document.querySelector(".song-details").innerHTML = song;
         setDisplayTime();
@@ -135,7 +135,7 @@ let pauseSong = () => {
 
 //  Method to fetch Song name.
 let fetchSongDetails = async (folder) => {
-    let response = await fetch(`https://himanshu212223.github.io/Music-App---Vanila-JS//Resources/Songs/${folder}`);
+    let response = await fetch(`https://himanshu212223.github.io/Music-App---Vanila-JS/Resources/Songs/${folder}`);
     let responseText = await response.text();
 
     let div = document.createElement('ul');
