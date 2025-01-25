@@ -14,7 +14,7 @@ let isAudioPlaying = false;
 let fetchAlbum = async () => {
     let fetchFolder = await fetch(`./Resources/Songs/`);
     let responseFolder = await fetchFolder.text();
-    console.log(responseFolder);
+    console.log(`responseFolder = ${responseFolder}`);
 
     let div = document.createElement('ul');
     div.innerHTML = responseFolder;
